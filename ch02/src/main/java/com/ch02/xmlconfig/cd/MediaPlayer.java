@@ -1,4 +1,4 @@
-package com.ch02.autoconfig.cd;
+package com.ch02.xmlconfig.cd;
 
 /**
  * @author restep

@@ -1,7 +1,6 @@
-package com.ch02.autoconfig.config;
+package com.ch02.autoconfig.mediaplayer;
 
-import com.ch02.autoconfig.cd.CompactDisc;
-import com.ch02.autoconfig.cd.MediaPlayer;
+import com.ch02.autoconfig.cd.CdAutoConfig;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.runner.RunWith;
@@ -14,22 +13,21 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @date 2018/4/29
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration(classes = CdPlayerConfig.class)
-@ContextConfiguration(locations = "classpath:autoconfig.xml") //加载配置文件
-public class CdPlayerTest {
+@ContextConfiguration(locations = "classpath:autoconfig.xml")
+public class MediaPlayerAutoConfigTest {
     @Autowired
-    private CompactDisc compactDisc;
+    private MediaPlayerAutoConfig mediaPlayerAutoConfig;
 
     @Autowired
-    private MediaPlayer mediaPlayer;
+    private CdAutoConfig cdAutoConfig;
 
     @Test
     public void isCdNull() {
-        assertNotNull(compactDisc);
+        assertNotNull(cdAutoConfig);
     }
 
     @Test
     public void play() {
-        mediaPlayer.play();
+        mediaPlayerAutoConfig.play();
     }
 }
