@@ -3,9 +3,8 @@ package com.ch01.minstrel;
 import java.io.PrintStream;
 
 /**
- * 2018/4/29
- *
  * @author restep
+ * @date 2018/4/29
  */
 public class Minstrel {
     private PrintStream printStream;

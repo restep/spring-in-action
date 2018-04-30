@@ -1,9 +1,8 @@
 package com.ch01.quest;
 
 /**
- * 2018/4/29
- *
  * @author restep
+ * @date 2018/4/29
  */
 public interface Quest {
     /**

@@ -1,13 +1,11 @@
 package com.ch01.printstream;
 
 import java.io.ByteArrayOutputStream;
-import java.io.OutputStream;
 import java.io.PrintStream;
 
 /**
- * 2018/4/29
- *
  * @author restep
+ * @date 2018/4/29
  */
 public class FakePrintStream extends PrintStream {
     public static StringBuffer stringBuffer = new StringBuffer();

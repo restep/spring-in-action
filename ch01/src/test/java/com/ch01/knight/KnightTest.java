@@ -5,9 +5,8 @@ import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * 2018/4/29
- *
  * @author restep
+ * @date 2018/4/29
  */
 public class KnightTest {
     private Knight knight;

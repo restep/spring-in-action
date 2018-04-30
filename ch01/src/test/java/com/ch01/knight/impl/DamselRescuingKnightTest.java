@@ -4,9 +4,8 @@ import com.ch01.quest.impl.RescueDamselQuest;
 import org.junit.Test;
 
 /**
- * 2018/4/29
- *
  * @author restep
+ * @date 2018/4/29
  */
 public class DamselRescuingKnightTest {
     @Test

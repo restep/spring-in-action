@@ -5,9 +5,8 @@ import org.junit.Test;
 import static org.mockito.Mockito.*;
 
 /**
- * 2018/4/29
- *
  * @author restep
+ * @date 2018/4/29
  */
 public class BraveKnightTest {
     @Test

@@ -5,9 +5,8 @@ import com.ch01.quest.Quest;
 import java.io.PrintStream;
 
 /**
- * 2018/4/29
- *
  * @author restep
+ * @date 2018/4/29
  */
 public class SlayDragonQuest implements Quest {
     private PrintStream printStream;

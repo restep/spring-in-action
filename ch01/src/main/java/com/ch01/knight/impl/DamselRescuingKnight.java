@@ -4,9 +4,8 @@ import com.ch01.knight.Knight;
 import com.ch01.quest.impl.RescueDamselQuest;
 
 /**
- * 2018/4/29
- *
  * @author restep
+ * @date 2018/4/29
  */
 public class DamselRescuingKnight implements Knight {
     private RescueDamselQuest quest;
