@@ -7,13 +7,25 @@
 
     <bean id="cdXmlConfig" class="com.ch02.xmlconfig.cd.impl.CdXmlConfigImpl"></bean>
 
-    <bean id="cdXmlConfig2" class="com.ch02.xmlconfig.cd.impl.BlankCdXmlConfigImpl">
+    <bean id="blankCdXmlConfig" class="com.ch02.xmlconfig.cd.impl.BlankCdXmlConfigImpl">
         <property name="title" value="xmlConfig.xml注入title"/>
         <property name="artist" value="xmlConfig.xml注入artist"/>
     </bean>
 
+    <bean id="listCdXmlConfig" class="com.ch02.xmlconfig.cd.impl.ListCdXmlConfigImpl">
+        <property name="list">
+            <list>
+                <value>aaa</value>
+                <value>bbb</value>
+                <value>ccc</value>
+                <value>ddd</value>
+            </list>
+        </property>
+    </bean>
+
     <bean id="mediaPlayerXmlConfigImpl" class="com.ch02.xmlconfig.mediaplayer.impl.MediaPlayerXmlConfigImpl">
         <property name="cdXmlConfig" ref="cdXmlConfig"/>
-        <property name="cdXmlConfig2" ref="cdXmlConfig2"/>
+        <property name="blankCdXmlConfig" ref="blankCdXmlConfig"/>
+        <property name="listCdXmlConfig" ref="listCdXmlConfig"/>
     </bean>
 </beans>
