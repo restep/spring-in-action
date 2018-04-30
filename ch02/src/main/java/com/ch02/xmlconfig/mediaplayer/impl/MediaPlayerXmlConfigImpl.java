@@ -11,12 +11,19 @@ import com.ch02.xmlconfig.mediaplayer.MediaPlayerXmlConfig;
 public class MediaPlayerXmlConfigImpl implements MediaPlayerXmlConfig {
     private CdXmlConfig cdXmlConfig;
 
+    private CdXmlConfig cdXmlConfig2;
+
     @Override
     public void play() {
         cdXmlConfig.play();
+        cdXmlConfig2.play();
     }
 
     public void setCdXmlConfig(CdXmlConfig cdXmlConfig) {
         this.cdXmlConfig = cdXmlConfig;
+    }
+
+    public void setCdXmlConfig2(CdXmlConfig cdXmlConfig2) {
+        this.cdXmlConfig2 = cdXmlConfig2;
     }
 }

@@ -5,9 +5,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="cdXmlConfigImpl" class="com.ch02.xmlconfig.cd.impl.CdXmlConfigImpl"></bean>
+    <bean id="cdXmlConfig" class="com.ch02.xmlconfig.cd.impl.CdXmlConfigImpl"></bean>
+
+    <bean id="cdXmlConfig2" class="com.ch02.xmlconfig.cd.impl.BlankCdXmlConfigImpl">
+        <property name="title" value="xmlConfig.xml注入title"/>
+        <property name="artist" value="xmlConfig.xml注入artist"/>
+    </bean>
 
     <bean id="mediaPlayerXmlConfigImpl" class="com.ch02.xmlconfig.mediaplayer.impl.MediaPlayerXmlConfigImpl">
-        <property ref="cdXmlConfigImpl" name="cdXmlConfig"/>
+        <property name="cdXmlConfig" ref="cdXmlConfig"/>
+        <property name="cdXmlConfig2" ref="cdXmlConfig2"/>
     </bean>
 </beans>
