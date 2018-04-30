@@ -1,35 +1,34 @@
-package com.ch02.javaconfig.mediaplayer;
+package com.ch02.xmlconfig.mediaplayer;
 
-import com.ch02.javaconfig.cd.CdJavaConfig;
-import com.ch02.javaconfig.config.CdConfig;
+import com.ch02.xmlconfig.cd.CdXmlConfig;
 import org.junit.Test;
+import static org.junit.Assert.*;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import static org.junit.Assert.assertNotNull;
 
 /**
  * @author restep
  * @date 2018/4/29
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = CdConfig.class)
-public class MediaPlayerJavaConfigTest {
+@ContextConfiguration(locations = "classpath:xmlconfig.xml")
+public class MediaPlayerXmlConfigTest {
     @Autowired
-    private MediaPlayerJavaConfig mediaPlayerJavaConfig;
+    private MediaPlayerXmlConfig mediaPlayerXmlConfig;
 
     @Autowired
-    private CdJavaConfig cdJavaConfig;
+    private CdXmlConfig cdXmlConfig;
+
 
     @Test
     public void isCdNull() {
-        assertNotNull(cdJavaConfig);
+        assertNotNull(cdXmlConfig);
     }
 
     @Test
     public void play() {
-        mediaPlayerJavaConfig.play();
+        mediaPlayerXmlConfig.play();
     }
 }
