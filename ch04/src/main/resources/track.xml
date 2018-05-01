@@ -22,4 +22,6 @@
     </bean>
 
     <bean id="track" class="com.ch04.track.Track"/>
+
+    <bean id="encoreIntroducer" class="com.ch04.encore.EncoreIntroducer"/>
 </beans>
