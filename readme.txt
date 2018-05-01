@@ -46,6 +46,15 @@ Spring定义了多种作用域
     购物车bean来说 会话作用域是最为合适的 因为它与给定的用户关联性最大
 请求(Request)：在web应用中 为每个请求创建一个bean实例
 
+第四章：面向切面的Spring
+一.Spring提供了4种类型的AOP支持
+1.基于代理的经典Spring AOP
+2.纯POJO切面
+3.@AspectJ注解驱动的切面
+4.注入式AspectJ切面(适用于Spring各版本)
+前三种都是Spring AOP实现的变体 Spring AOP构建在动态代理基础之上
+因此 Spring对AOP的支持局限于方法拦截
+
 
 
 

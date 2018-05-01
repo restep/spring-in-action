@@ -14,7 +14,7 @@ public class ListCdXmlConfigImpl implements CdXmlConfig {
     @Override
     public void play() {
         System.out.println("com.ch02.xmlconfig.cd.impl.ListCdXmlConfigImpl#play");
-        System.out.println("arr: " + list);
+        System.out.println("list: " + list);
     }
 
     public void setList(List<String> list) {
