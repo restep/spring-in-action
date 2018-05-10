@@ -6,5 +6,8 @@ package com.ch02.javaconfig.mediaplayer;
  * @date 2018/4/30
  */
 public interface MediaPlayerJavaConfig {
+    /**
+     * 播放
+     */
     void play();
 }

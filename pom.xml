@@ -15,6 +15,7 @@
         <module>ch01</module>
         <module>ch02</module>
         <module>ch04</module>
+        <module>ch05</module>
     </modules>
 
     <build>
@@ -180,6 +181,12 @@
                 <artifactId>mockito-all</artifactId>
                 <version>${mockito.version}</version>
                 <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>1.2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

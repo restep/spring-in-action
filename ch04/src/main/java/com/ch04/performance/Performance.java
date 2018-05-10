@@ -5,5 +5,8 @@ package com.ch04.performance;
  * @date 2018/5/1
  */
 public interface Performance {
+    /**
+     * 演出
+     */
     void perform();
 }

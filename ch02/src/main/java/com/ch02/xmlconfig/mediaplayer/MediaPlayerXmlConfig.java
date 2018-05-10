@@ -6,5 +6,8 @@ package com.ch02.xmlconfig.mediaplayer;
  * @date 2018/4/30
  */
 public interface MediaPlayerXmlConfig {
+    /**
+     * 播放
+     */
     void play();
 }

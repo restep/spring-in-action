@@ -6,5 +6,8 @@ package com.ch02.autoconfig.mediaplayer;
  * @date 2018/4/30
  */
 public interface MediaPlayerAutoConfig {
+    /**
+     * 播放
+     */
     void play();
 }
