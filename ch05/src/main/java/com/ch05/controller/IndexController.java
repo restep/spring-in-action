@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @date 2018/5/10
  */
 @Controller
+@RequestMapping({"/", "/index"})
 public class IndexController {
     /**
      * 进入首页
      * @return
      */
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public String index() {
         return "index";
     }
