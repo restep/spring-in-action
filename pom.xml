@@ -58,7 +58,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.version>4.3.4.RELEASE</spring.version>
         <mysql.version>5.1.18</mysql.version>
-        <servlet.version>3.0-alpha-1</servlet.version>
+        <servlet.version>3.0.1</servlet.version>
         <junit.version>4.12</junit.version>
         <mockito.version>1.8.4</mockito.version>
     </properties>
@@ -164,7 +164,7 @@
 
             <dependency>
                 <groupId>javax.servlet</groupId>
-                <artifactId>servlet-api</artifactId>
+                <artifactId>javax.servlet-api</artifactId>
                 <version>${servlet.version}</version>
                 <scope>provided</scope>
             </dependency>
