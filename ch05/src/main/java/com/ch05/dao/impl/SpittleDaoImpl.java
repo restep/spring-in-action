@@ -4,13 +4,13 @@ import com.ch05.dao.SpittleDao;
 import com.ch05.model.Spittle;
 import com.ch05.pagination.Pagination;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 /**
@@ -35,12 +35,13 @@ public class SpittleDaoImpl implements SpittleDao {
 
         //结果集
         List<Spittle> spittleList = jdbcTemplate.query(dataSql.toString(), new RowMapper<Spittle>() {
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             @Override
             public Spittle mapRow(ResultSet resultSet, int rowNum) throws SQLException {
                 Spittle spittle = new Spittle();
                 spittle.setId(resultSet.getInt("id"));
                 spittle.setMessage(resultSet.getString("message"));
-                spittle.setGmtCreate(resultSet.getDate("gmtCreate"));
+                spittle.setGmtCreate(sdf.format(resultSet.getTimestamp("gmtCreate")));
                 spittle.setLatitude(resultSet.getDouble("latitude"));
                 spittle.setLongitude(resultSet.getDouble("longitude"));
 
@@ -53,7 +54,7 @@ public class SpittleDaoImpl implements SpittleDao {
         Integer total = jdbcTemplate.queryForObject(countSql, new RowMapper<Integer>() {
             @Override
             public Integer mapRow(ResultSet resultSet, int rowNum) throws SQLException {
-                return resultSet.getInt(0);
+                return resultSet.getInt(1);
             }
         });
 

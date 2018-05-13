@@ -11,7 +11,7 @@ import java.util.Date;
 public class Spittle {
     private Integer id;
     private String message;
-    private Date gmtCreate;
+    private String gmtCreate;
     private Double latitude;
     private Double longitude;
 
@@ -31,11 +31,11 @@ public class Spittle {
         this.message = message;
     }
 
-    public Date getGmtCreate() {
+    public String getGmtCreate() {
         return gmtCreate;
     }
 
-    public void setGmtCreate(Date gmtCreate) {
+    public void setGmtCreate(String gmtCreate) {
         this.gmtCreate = gmtCreate;
     }
 
