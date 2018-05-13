@@ -20,6 +20,10 @@ public class SpittleController {
     @Autowired
     private SpittleDao spittleDao;
 
+    public SpittleController(SpittleDao spittleDao) {
+        this.spittleDao = spittleDao;
+    }
+
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String list(@RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum,
                                     @RequestParam(value = "pageSize", defaultValue = "10") Integer pageSize,

@@ -2,7 +2,7 @@ package com.ch01.knight.impl;
 
 import com.ch01.quest.Quest;
 import org.junit.Test;
-import static org.mockito.Mockito.*;
+import org.mockito.Mockito;
 
 /**
  * @author restep
@@ -11,10 +11,10 @@ import static org.mockito.Mockito.*;
 public class BraveKnightTest {
     @Test
     public void embarkOnQuest() {
-        Quest quest = mock(Quest.class);
+        Quest quest = Mockito.mock(Quest.class);
         BraveKnight knight = new BraveKnight(quest);
         knight.embarkOnQuest();
 
-        verify(quest, times(1)).embark();
+        Mockito.verify(quest, Mockito.times(1)).embark();
     }
 }

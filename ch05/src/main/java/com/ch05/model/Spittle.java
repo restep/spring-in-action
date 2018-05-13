@@ -1,7 +1,5 @@
 package com.ch05.model;
 
-import java.util.Date;
-
 /**
  * 消息
  *
