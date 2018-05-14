@@ -56,7 +56,14 @@ Spring定义了多种作用域
 因此 Spring对AOP的支持局限于方法拦截
 
 第五章：构建Spring Web应用程序
-161 start
+SpringMVC允许以多种方式将客户端中的数据传送到控制器的处理器方法中
+    查询参数(Query Parameter)
+    表单参数(Form Parameter)
+    路径变量(Path Variable)
+
+第七章：使用Spring Web Flow
+240 start
+
 
 
 
