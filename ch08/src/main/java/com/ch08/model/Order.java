@@ -24,6 +24,14 @@ public class Order implements Serializable {
         this.pizzaList = new ArrayList<>();
     }
 
+    public Float getTotal() {
+        return 0.0F;
+    }
+
+    public void addPizza(Pizza pizza) {
+        pizzaList.add(pizza);
+    }
+
     public Customer getCustomer() {
         return customer;
     }

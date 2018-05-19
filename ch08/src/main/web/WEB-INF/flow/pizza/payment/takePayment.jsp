@@ -14,17 +14,17 @@
   </script>
 
 	<h2>Take Payment</h2>
-	<form:form commandName="paymentDetails" name="paymentForm">
+	<form:form commandName="paymentDetail" name="paymentForm">
 	  <input type="hidden" name="_flowExecutionKey" 
 	      value="${flowExecutionKey}"/>	      
 
-    <form:radiobutton path="paymentType"
+    <form:radiobutton path="paymentTypeEnum"
         value="CASH" label="Cash (taken at delivery)" 
         onclick="hideCreditCardField()"/><br/> 
-    <form:radiobutton path="paymentType"
+    <form:radiobutton path="paymentTypeEnum"
         value="CHECK" label="Check (taken at delivery)"  
         onclick="hideCreditCardField()"/><br/>
-    <form:radiobutton path="paymentType"
+    <form:radiobutton path="paymentTypeEnum"
         value="CREDIT_CARD" label="Credit Card:" 
         onclick="showCreditCardField()"/>       
 	      

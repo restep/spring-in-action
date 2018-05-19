@@ -27,7 +27,7 @@ public class PizzaFlowAction {
     }
 
     public void addCustomer(Customer customer) {
-
+        System.out.println("addCustomer");
     }
 
     public AbstractPayment verifyPayment(PaymentDetail paymentDetail) {
@@ -42,7 +42,7 @@ public class PizzaFlowAction {
     }
 
     public void saveOrder(Order order) {
-
+        System.out.println("saveOrder");
     }
 
     public boolean checkDeliveryArea(String zipCode) {

@@ -19,14 +19,14 @@
 		<hr/>
 		<h3>Pizzas:</h3>
 		
-		<c:if test="${fn:length(order.pizzas) eq 0}">
+		<c:if test="${fn:length(order.pizzaList) eq 0}">
 		<b>No pizzas in this order.</b>
 		</c:if>
 		
 		<br/>
-		<c:forEach items="${order.pizzas}" var="pizza">
-		<li>${pizza.size} : 
-		  <c:forEach items="${pizza.toppings}" var="topping">
+		<c:forEach items="${order.pizzaList}" var="pizza">
+		<li>${pizza.pizzaSizeEnum} :
+		  <c:forEach items="${pizza.pizzaToppingEnumList}" var="topping">
 		    <c:out value="${topping}" />,
 		  </c:forEach>
 		</li>
@@ -37,7 +37,7 @@
              value="${flowExecutionKey}"/>
       <input type="submit" name="_eventId_createPizza" 
              value="Create Pizza" />
-    <c:if test="${fn:length(order.pizzas) gt 0}">
+    <c:if test="${fn:length(order.pizzaList) gt 0}">
       <input type="submit" name="_eventId_checkout" 
              value="Checkout" />
     </c:if>

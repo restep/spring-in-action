@@ -24,7 +24,7 @@
     </subflow-state>
         
     <action-state id="saveOrder">
-        <evaluate expression="pizzaFlowActions.saveOrder(order)" />
+        <evaluate expression="pizzaFlowAction.saveOrder(order)" />
         <transition to="thankYou" />
     </action-state>
     

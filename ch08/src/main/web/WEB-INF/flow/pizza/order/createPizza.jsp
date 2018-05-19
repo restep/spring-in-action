@@ -7,14 +7,14 @@
 	      value="${flowExecutionKey}"/>
 	
 	  <b>Size: </b><br/>
-	  <form:radiobutton path="size" label="Small (12-inch)" value="SMALL"/><br/>
-    <form:radiobutton path="size" label="Medium (14-inch)" value="MEDIUM"/><br/>
-    <form:radiobutton path="size" label="Large (16-inch)" value="LARGE"/><br/>
-    <form:radiobutton path="size" label="Ginormous (20-inch)" value="GINORMOUS"/><br/>
+	  <form:radiobutton path="pizzaSizeEnum" label="Small (12-inch)" value="SMALL"/><br/>
+    <form:radiobutton path="pizzaSizeEnum" label="Medium (14-inch)" value="MEDIUM"/><br/>
+    <form:radiobutton path="pizzaSizeEnum" label="Large (16-inch)" value="LARGE"/><br/>
+    <form:radiobutton path="pizzaSizeEnum" label="Ginormous (20-inch)" value="GINORMOUS"/><br/>
 	  <br/>
 	  
 	  <b>Toppings: </b><br/>
-	  <form:checkboxes path="toppings" items="${toppingsList}" 
+	  <form:checkboxes path="pizzaToppingEnumList" items="${pizzaToppingEnumList}"
 	                   delimiter="<br/>"/><br/><br/>
 
 	      
