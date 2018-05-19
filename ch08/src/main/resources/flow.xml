@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:flow="http://www.springframework.org/schema/webflow-config"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/webflow-config
+   http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.3.xsd
+   http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <!-- <flow:flow-executor>元素会创建一个流程执行器 -->
+    <flow:flow-executor id="flowExecutor"/>
+
+    <flow:flow-registry id="flowRegistry" base-path="/WEB-INF/flow">
+        <flow:flow-location-pattern value="/**/*-flow.xml"/>
+    </flow:flow-registry>
+
+    <!--
+    FlowHandlerMapping来帮助DispatcherServlet将流程请求发送给Spring Web Flow
+    如果我们有一个ID为pizza的流程
+    FlowHandlerMapping就会知道如果请求的URL模式（相对于应用程序的上下文路径）
+    是“/pizza”的话， 就要将其匹配到这个流程上
+    -->
+    <bean class="org.springframework.webflow.mvc.servlet.FlowHandlerMapping">
+        <property name="flowRegistry" ref="flowRegistry"/>
+    </bean>
+
+    <!--
+    FlowHandlerMapping的工作仅仅是将流程请求定向到Spring Web Flow上
+    响应请求的是FlowHandlerAdapter  FlowHandlerAdapter等同于Spring MVC的控制器，
+    -->
+    <bean class="org.springframework.webflow.mvc.servlet.FlowHandlerAdapter">
+        <property name="flowExecutor" ref="flowExecutor"/>
+    </bean>
+</beans>
